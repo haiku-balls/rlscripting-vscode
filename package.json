@@ -1,8 +1,10 @@
 {
   "name": "rlscripting",
+  "publisher": "haiku",
   "displayName": "RLScripting",
   "description": "Gives you syntax highlighting when modding RealLive scripts in VSC",
   "version": "0.0.1",
+  "icon": "./ext_icon.png",
   "repository": {
     "url": "https://github.com/haiku-balls/rlscripting-vscode"
   },
@@ -33,4 +35,5 @@
       "path": "./syntaxes/rl.tmLanguage.json"
     }]
   }
+
 }
