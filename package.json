@@ -3,6 +3,9 @@
   "displayName": "RLScripting",
   "description": "Gives you syntax highlighting when modding RealLive scripts in VSC",
   "version": "0.0.1",
+  "repository": {
+    "url": "https://github.com/haiku-balls/rlscripting-vscode"
+  },
   "engines": {
     "vscode": "^1.80.0"
   },
