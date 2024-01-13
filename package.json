@@ -1,0 +1,33 @@
+{
+  "name": "rlscripting",
+  "displayName": "RLScripting",
+  "description": "Gives you syntax highlighting when modding RealLive scripts in VSC",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.80.0"
+  },
+  "categories": [
+    "Programming Languages",
+    "Snippets",
+    "Themes"
+  ],
+  "contributes": {
+    "languages": [{
+      "id": "rl",
+      "aliases": ["RealLive Scripts", "rl"],
+      "extensions": [".org",".utf"],
+      "configuration": "./language-configuration.json"
+    }],
+    "snippets": [
+      {
+        "language": "rl",
+        "path": "./snippets.json"
+      }
+    ],
+    "grammars": [{
+      "language": "rl",
+      "scopeName": "source.rl",
+      "path": "./syntaxes/rl.tmLanguage.json"
+    }]
+  }
+}

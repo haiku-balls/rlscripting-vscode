@@ -1,0 +1,70 @@
+{
+
+	"Change Title": {
+		"prefix": "title",
+		"scope": "rl",
+		"body": [
+			"title(${1:#res<$0>})",
+			"title(${2:#res<0003>})"
+		],
+		"description": "Change the game's window title bar."
+	},
+	"Play BGM": {
+		"prefix": "bgmLoop",
+		"scope": "rl",
+		"body": [
+			"bgmLoop('$1')"
+		],
+		"description": "Play a BGM track."
+	},
+	"Goto (Unless)": {
+		"prefix": "goto_unless",
+		"scope": "rl",
+		"body": [
+			"goto_unless(${1:intA[]}) @${2:X}",
+			"goto_unless(!${3:intA[]}) @$2",
+			"goto_unless($1 == 1) @$2"
+		],
+		"description": "Goes to the marker specifed unless a condition you specify."
+	},
+	"Pause": {
+		"prefix": "pause",
+		"scope": "rl",
+		"body": [
+			"pause"
+		],
+		"description": "The engine will wait for input before continuing to the next dialogue line."
+	},
+	"Dialogue Reference": {
+		"prefix": "#res",
+		"scope": "rl",
+		"body": [
+			"#res<${1:XXXX}>",
+			"#res<0006>"
+		],
+		"description": "References the dialogue ID to display. (from the .utf file)"
+	},
+	"Sprite(s)": {
+		"prefix": "intF[1212]",
+		"scope": "rl",
+		"body": 
+		[
+			"intF[1212] = 0",
+		 	"intF[1213] = 0",
+		  	"intF[1214] = 0",
+			"strS[1001] = '${1|NONE,CGTMXX|}'",
+			"intF[1215] = 0",
+			"strS[1002] = '${2|NONE,CGTMXX|}'",
+			"intF[1216] = 0",
+			"strS[1003] = '${3|NONE,CGTMXX|}'$0",
+			"intF[1217] = 0",
+			"intF[1224] = intF[1223]",
+			"farcall(9050, 0)",
+			"intF[1218] = 0",
+			"SET_WAIP_WINDOWCLOSE_OFF",
+			"SET_GRPCOM_WINDOWCLOSE_OFF"
+
+		],
+		"description": "Displays sprites. Choose 'NONE' if you don't want to show multiple. Replace CGTM with the sprite name."
+	}
+}

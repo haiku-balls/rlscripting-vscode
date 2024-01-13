@@ -1,0 +1,99 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "RealLive Scripts",
+	"patterns": [
+		{
+			"include": "#comments"
+		},
+		{
+			"include": "#dialogue"
+		},
+		{
+			"include": "#dialogueRefer"
+		},
+		{
+			"include": "#operator"
+		},
+		{
+			"include": "#number"
+		},
+		{
+			"include": "#functions"
+		},
+		{
+			"include": "#markers"
+		},
+		{
+			"include": "#string"
+		},
+		{
+			"include": "#subject"
+		},
+		{
+			"include": "#dialogueLine"
+		}
+	],
+	"repository": {
+		"number": {
+			"patterns": [{
+				"name": "constant.numeric",
+				"match": "[0-9]+"
+			}]
+		},
+		"string": {
+			"patterns": [{
+				"name": "string.quoted.single",
+				"match": "'.*'"
+			}]
+		},
+		"comments": {
+			"patterns": [{
+				"name": "comment.line.double-slash",
+				"match": "//.*"
+			}]
+		},
+		"operator": {
+			"patterns": [{
+				"name": "emphasis",
+				"match": "#.*[^res]|eof|halt"
+			}]
+		},
+		"dialogue": {
+			"patterns": [{
+				"name": "variable",
+				"match": "<[0-9]+>"
+			}]
+		},
+		"dialogueRefer": {
+			"patterns": [{
+				"name": "variable",
+				"match": "#[res]+<[0-9]+>"
+			}]
+		},
+		"functions": {
+			"patterns": [{
+				"name": "support.function",
+				"match": "intF|intF|strS|farcall|SET_WAIP_WINDOWCLOSE_OFF|SET_GRPCOM_WINDOWCLOSE_OFF|koePlay|pause|goto_unless|intA|strcmp|strclear|SET_WAIP_WINDOWCLOSE_ON|SET_GRPCOM_WINDOWCLOSE_ON|farcall_with|select|goto|title|bgmLoop|jump"
+			}]
+		},
+		"markers": {
+			"patterns": [{
+				"name": "variable",
+				"match": "@[0-9]+"
+			}]
+		},
+		"subject": {
+			"patterns": [{
+				"name": "variable",
+				"match": "\\\\{[A-Za-z]+\\}"
+			}]
+		},
+		"dialogueLine": {
+			"patterns": [{
+				"name": "string",
+				"match": "\".*"
+			}]
+		}
+	},
+	"scopeName": "source.rl"
+}
